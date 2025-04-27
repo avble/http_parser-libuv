@@ -1,5 +1,5 @@
 /*
-/* Copyright (c) 2024-2024 Harry Le (avble.harry at gmail dot com)
+* Copyright (c) 2024-2024 Harry Le (avble.harry at gmail dot com)
 
 It can be used, modified.
 */

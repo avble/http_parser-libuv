@@ -1,4 +1,4 @@
 all:
-	g++ main.cpp -luv -lhttp_parser -o http_srv
+	g++ http_parser.cpp main.cpp -luv -std=c++17 -o http_srv
 clean:
 	rm -f http_srv

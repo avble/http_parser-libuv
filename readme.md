@@ -1,9 +1,12 @@
 # Dependencies
-libuv1 and http-parser
+libuv
 
 ``` shell
-# install in ubuntu
-sudo apt install libhttp-parser-dev libuv1-dev
+# Ubunto
+sudo apt install libuv1-dev
+
+# macOS
+brew install libuv
 ```
 
 # Compilation

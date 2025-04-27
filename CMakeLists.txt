@@ -4,12 +4,17 @@ project(uvhttp_sample_cpp
     LANGUAGES CXX)
 
 add_executable(http_srv)
-target_sources(http_srv PRIVATE  main.cpp)
+target_sources(http_srv PRIVATE  main.cpp http_parser.cpp)
 
 set_property(TARGET http_srv PROPERTY CXX_STANDARD 17)
+
+# find_package(libuv REQUIRED)
+# target_link_libraries(http_srv PRIVATE uv)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(libuv REQUIRED libuv)
 
-target_link_libraries(http_srv PRIVATE ${libuv_LIBRARIES} http_parser)
+target_include_directories(http_srv PRIVATE ${libuv_INCLUDE_DIRS})
 
+target_link_directories(http_srv PRIVATE ${libuv_LIBRARY_DIRS})
+target_link_libraries(http_srv PRIVATE ${libuv_LIBRARIES})
