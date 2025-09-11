@@ -7,6 +7,7 @@ add_executable(http_srv)
 target_sources(http_srv PRIVATE  main.cpp http_parser.cpp)
 
 set_property(TARGET http_srv PROPERTY CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "export compile command" FORCE)
 
 # find_package(libuv REQUIRED)
 # target_link_libraries(http_srv PRIVATE uv)
